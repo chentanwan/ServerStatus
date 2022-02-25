@@ -34,7 +34,7 @@ def getIP():
     return ip
 
 def restartSSS():
-    cmd = ["docker-compose", "restart"]
+    cmd = ["systemctl", "restart", "ServerStatus"]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     for line in p.stdout:
         print(line)
