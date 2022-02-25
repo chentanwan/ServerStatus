@@ -10,15 +10,15 @@ import requests
 import time
 import traceback
 
-NODE_STATUS_URL = 'http://sss/json/stats.json'
+NODE_STATUS_URL = 'http://140.238.52.25:8088/'
 
 offs = []
 counterOff = {}
 counterOn = {}
 
 def _send(text):
-    chat_id = os.getenv('TG_CHAT_ID')
-    bot_token = os.environ.get('TG_BOT_TOKEN')
+    chat_id = os.getenv('1685519108')
+    bot_token = os.environ.get('2030782079:AAHr9MO0TeiaVpMW4rwQ_IvST-bppJ66ImQ')
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage?parse_mode=HTML&disable_web_page_preview=true&chat_id=" + chat_id + "&text=" + text
     try:
         requests.get(url)
